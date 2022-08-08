@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "NITIN FLAVIER M 20BEE0341",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 36.37, "left": 110.45, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -227.3, "left": 206.96, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -60.33,
+      "left": 382.93,
+      "attrs": { "value": "10" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -147.5, "left": 74.18, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.2", "lcd1:K", "black", [ "v24.22", "h164.57", "v-285.83", "h-98.69" ] ],
+    [ "lcd1:D0", "uno:2", "green", [ "v119.18", "h50.28" ] ],
+    [ "lcd1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "uno:3.3V", "green", [ "v1.01", "h13.97", "v312.18", "h-191.88" ] ],
+    [ "lcd1:D1", "uno:3", "green", [ "v113.39", "h33.91" ] ],
+    [ "lcd1:D2", "uno:4", "green", [ "v124.27", "h11.11" ] ],
+    [ "lcd1:D3", "uno:5", "green", [ "v129.11", "h-8.06" ] ],
+    [ "lcd1:D4", "uno:6", "green", [ "v124.27", "h-27.23" ] ],
+    [ "lcd1:D5", "uno:7", "green", [ "v126.69", "h-48.82" ] ],
+    [ "lcd1:D6", "uno:8", "green", [ "v125.48", "h-71.62" ] ],
+    [ "lcd1:D7", "uno:9", "green", [ "v109.76", "h-89.58" ] ],
+    [ "uno:A0", "lcd1:E", "yellow", [ "v24.96", "h-215.05", "v-232.14", "h184.99" ] ],
+    [ "uno:GND.2", "lcd1:RW", "black", [ "v34.63", "h-186.22", "v-255.11", "h187.4" ] ],
+    [ "uno:A1", "lcd1:RS", "yellow", [ "v39.47", "h-243.9", "v-269.62", "h184.99" ] ],
+    [ "lcd1:VDD", "pot1:VCC", "red", [ "v37.77", "h-128.56" ] ],
+    [
+      "lcd1:VSS",
+      "pot1:GND",
+      "black",
+      [ "v24.47", "h-80.37", "v-92.75", "h-94.32", "v97.62", "h36.98" ]
+    ],
+    [ "lcd1:V0", "pot1:SIG", "orange", [ "v51.53", "h-146.86" ] ],
+    [
+      "uno:3.3V",
+      "pot1:VCC",
+      "red",
+      [ "v14.33", "h-193.02", "v-213.37", "h-0.28", "v-50.84", "h50.01" ]
+    ],
+    [ "uno:GND.2", "pot1:GND", "black", [ "v46.69", "h-225.79", "v-325.76", "h47.35" ] ]
+  ]
+}

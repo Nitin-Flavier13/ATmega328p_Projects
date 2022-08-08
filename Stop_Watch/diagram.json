@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "author": "NITIN FLAVIER M 20BEE0341",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -144.31,
+      "left": 77.02,
+      "attrs": { "digits": "4", "colon": "1", "common": "cathode" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -14.82,
+      "left": -108.35,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": -33.78, "left": -104.89, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 53.62,
+      "left": -108.65,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-resistor", "id": "r2", "top": 31.35, "left": -102.73, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 129.46,
+      "left": -108.8,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-resistor", "id": "r3", "top": 108.53, "left": -104.38, "attrs": {} }
+  ],
+  "connections": [
+    [ "sevseg1:E", "uno:6", "green", [ "v54.44", "h55.32" ] ],
+    [
+      "sevseg1:F",
+      "uno:7",
+      "green",
+      [ "v-16.97", "h-100.62", "v87.21", "h77.52", "v51.68", "h45.22" ]
+    ],
+    [ "sevseg1:G", "uno:8", "green", [ "v45.82", "h-4.62" ] ],
+    [ "sevseg1:DIG3", "uno:A2", "green", [ "v-52.02", "h154.18", "v441.48", "h-103.97" ] ],
+    [ "sevseg1:DIG1", "uno:A0", "green", [ "v-56.95", "h198.14", "v453.18", "h-126.74" ] ],
+    [ "sevseg1:DIG2", "uno:A1", "green", [ "v-46.71", "h159.09", "v426.29", "h-115.21" ] ],
+    [ "sevseg1:DIG4", "uno:A3", "green", [ "v15.76", "h133.49", "v291.88", "h-92.17" ] ],
+    [ "sevseg1:B", "uno:3", "green", [ "v-8.31", "h78.44", "v135.7", "h-44.81" ] ],
+    [ "sevseg1:A", "uno:2", "green", [ "v-13.43", "h120.69", "v144.66", "h-39.68" ] ],
+    [
+      "sevseg1:CLN",
+      "uno:9",
+      "green",
+      [ "h-1.57", "v-8.31", "h-124.18", "v84.49", "h58.89", "v47.37", "h29.44", "v11.52" ]
+    ],
+    [ "sevseg1:C", "uno:4", "green", [ "v23.8", "h45.31" ] ],
+    [ "sevseg1:D", "uno:5", "green", [ "v31.49", "h54.25" ] ],
+    [ "uno:GND.1", "sevseg1:COM", "black", [ "v-40.11", "h84.12" ] ],
+    [ "uno:GND.1", "r1:2", "black", [ "v0" ] ],
+    [ "r1:1", "btn1:1.l", "green", [ "v0" ] ],
+    [ "r2:1", "btn2:1.l", "green", [ "v-1.3", "h-11.54" ] ],
+    [ "r3:1", "btn3:1.l", "green", [ "v1.06", "h-6.8" ] ],
+    [ "uno:5V", "btn3:2.l", "red", [ "v37.32", "h-225.84" ] ],
+    [ "btn3:2.l", "btn2:2.l", "red", [ "h-33.64", "v-74.42" ] ],
+    [ "btn1:2.l", "btn2:2.l", "red", [ "h-32.46", "v1.56" ] ],
+    [ "r1:2", "r2:2", "black", [ "v3.44", "h35.99", "v70.96" ] ],
+    [ "r2:2", "r3:2", "black", [ "v1.07", "h31.17", "v70.96" ] ],
+    [ "btn1:1.r", "uno:11", "green", [ "v-6.15", "h183.5" ] ],
+    [ "btn2:1.r", "uno:12", "green", [ "v0.08", "h14.46", "v-70.67", "h165.34" ] ],
+    [ "btn3:1.r", "uno:13", "green", [ "v0.25", "h39.95", "v-142.67", "h125.34" ] ]
+  ]
+}

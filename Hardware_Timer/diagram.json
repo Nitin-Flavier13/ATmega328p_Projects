@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "author": "NITIN FLAVIER M 20BEE0341",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -87.1,
+      "left": 223.45,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -87.1,
+      "left": 193.41,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -87.1,
+      "left": 164.03,
+      "attrs": { "color": "black" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": -87.1,
+      "left": 136.62,
+      "attrs": { "color": "violet" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": -86.5,
+      "left": 109.93,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": -88.3,
+      "left": 251.68,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": -238.97, "left": 200.8, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r2", "top": -225.07, "left": 176.87, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r3", "top": -209.43, "left": 150.81, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r4", "top": -194.74, "left": 125.31, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r5", "top": -179.25, "left": 98.05, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r6", "top": -163.78, "left": 76.76, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led7",
+      "top": -86.64,
+      "left": 83.68,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led8",
+      "top": -84.68,
+      "left": 52.3,
+      "attrs": { "color": "orange" }
+    },
+    { "type": "wokwi-resistor", "id": "r7", "top": -148.35, "left": 52.08, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r8", "top": -130.09, "left": 33.82, "attrs": {} }
+  ],
+  "connections": [
+    [ "led6:A", "uno:2", "green", [ "v15", "h-38", "v4" ] ],
+    [ "led1:A", "uno:3", "green", [ "v8", "h-18" ] ],
+    [ "led6:C", "r1:2", "green", [ "v0" ] ],
+    [ "led1:C", "r2:2", "green", [ "v0" ] ],
+    [ "led2:A", "uno:4", "green", [ "v0" ] ],
+    [ "led2:C", "r3:2", "green", [ "v0" ] ],
+    [ "led3:A", "uno:5", "green", [ "v11", "h19" ] ],
+    [ "r4:2", "led3:C", "green", [ "v0" ] ],
+    [ "led4:A", "uno:6", "green", [ "v15", "h41" ] ],
+    [ "led5:A", "uno:7", "green", [ "v19", "h60" ] ],
+    [ "led7:A", "uno:8", "green", [ "v8", "h19", "v16", "h40" ] ],
+    [ "led8:A", "uno:9", "green", [ "v11", "h45", "v16", "h42", "v-1" ] ],
+    [ "led5:C", "r6:2", "green", [ "v-3", "h-9", "v-54", "h21" ] ],
+    [ "led7:C", "r7:2", "green", [ "v-3", "h-9", "v-45", "h22", "v-1" ] ],
+    [ "led4:C", "r5:2", "green", [ "v0", "h-9", "v-49", "h14" ] ],
+    [ "led8:C", "r8:2", "green", [ "v-1", "h-8", "v-61", "h33" ] ],
+    [ "r8:1", "uno:GND.1", "green", [ "v0" ] ],
+    [ "r7:1", "uno:GND.1", "green", [ "v-1", "h-24", "v154" ] ],
+    [ "r6:1", "uno:GND.1", "green", [ "v1", "h-54", "v164" ] ],
+    [ "r5:1", "uno:GND.1", "green", [ "v0", "h-80", "v180" ] ],
+    [ "r4:1", "uno:GND.1", "green", [ "v0", "h-112", "v194" ] ],
+    [ "r3:1", "uno:GND.1", "green", [ "v0", "h-142", "v211" ] ],
+    [ "r2:1", "uno:GND.1", "green", [ "v-1", "h-172", "v224" ] ],
+    [ "r1:1", "uno:GND.1", "green", [ "v0", "h-200", "v239" ] ],
+    [ "led9:C", "r9:2", "green", [ "v0" ] ],
+    [ "r9:1", "uno:GND.3", "green", [ "v0" ] ],
+    [ "btn1:2.l", "r9:2", "green", [ "h0" ] ],
+    [ "uno:5V", "btn1:2.l", "red", [ "v80", "h105" ] ],
+    [ "btn1:1.l", "uno:A0", "green", [ "h0" ] ]
+  ]
+}

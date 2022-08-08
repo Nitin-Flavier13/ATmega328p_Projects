@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "author": "NITIN FLAVIER M 20BEE0341",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 36.37, "left": 110.45, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -223.39, "left": 115.99, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -88.49,
+      "left": 320.47,
+      "attrs": { "value": "100" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -166.28, "left": 17.84, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -168.64,
+      "left": -262.68,
+      "attrs": {
+        "keys": [ "1", "2", "3", "+", "4", "5", "6", "-", "7", "8", "9", "*", "C", "0", "=", "/" ]
+      }
+    },
+    { "type": "wokwi-resistor", "id": "r2", "top": 283.35, "left": -116.53, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r3", "top": 258.14, "left": -107.25, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r4", "top": 234.26, "left": -99.29, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r5", "top": 211.71, "left": -88.67, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 8.99,
+      "left": 442.54,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-resistor", "id": "r6", "top": 101.1, "left": 402.91, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 129.73,
+      "left": 445.21,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 189.13,
+      "left": 436.95,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "uno:A0", "lcd1:E", "yellow", [ "v24.96", "h-215.05", "v-232.14", "h184.99" ] ],
+    [ "uno:GND.2", "lcd1:RW", "black", [ "v34.63", "h-186.22", "v-255.11", "h187.4" ] ],
+    [ "uno:A1", "lcd1:RS", "yellow", [ "v39.47", "h-243.9", "v-269.62", "h184.99" ] ],
+    [ "lcd1:VDD", "pot1:VCC", "red", [ "v37.77", "h-128.56" ] ],
+    [ "lcd1:V0", "pot1:SIG", "orange", [ "v51.53", "h-146.86" ] ],
+    [ "uno:3.3V", "pot1:VCC", "red", [ "v48.69", "h-190.15" ] ],
+    [ "lcd1:VSS", "pot1:GND", "black", [ "v26.82", "h-112.86" ] ],
+    [ "lcd1:D0", "uno:2", "green", [ "v37.05", "h132.49" ] ],
+    [ "lcd1:D1", "uno:3", "green", [ "v43.18", "h110.25" ] ],
+    [ "lcd1:D2", "uno:4", "green", [ "v50.53", "h94.62" ] ],
+    [ "lcd1:D3", "uno:5", "green", [ "v57.87", "h72.88" ] ],
+    [ "lcd1:D4", "uno:6", "green", [ "v65.22", "h52.36" ] ],
+    [ "lcd1:D5", "uno:7", "green", [ "v70.12", "h35.51" ] ],
+    [ "lcd1:D6", "uno:8", "green", [ "v77.47", "h11.31" ] ],
+    [ "lcd1:D7", "uno:9", "green", [ "v0" ] ],
+    [ "lcd1:A", "r1:1", "red", [ "v0" ] ],
+    [ "r1:2", "uno:3.3V", "red", [ "v0.85", "h7.49", "v356.37", "h-120.02" ] ],
+    [ "uno:GND.2", "lcd1:K", "black", [ "v54.76", "h111.91", "v-367.4", "h-100.42" ] ],
+    [ "uno:GND.2", "pot1:GND", "black", [ "v69.3", "h-242.81" ] ],
+    [ "uno:A2", "keypad1:R1", "purple", [ "v113.08", "h-496.64" ] ],
+    [ "uno:A3", "keypad1:R2", "purple", [ "v103.79", "h-491.55" ] ],
+    [ "uno:A4", "keypad1:R3", "purple", [ "v94.51", "h-491.76" ] ],
+    [ "uno:A5", "keypad1:R4", "purple", [ "v85.22", "h-493.3" ] ],
+    [ "r2:2", "uno:10", "green", [ "v-0.13", "h94.9", "v-164.49", "h226.84" ] ],
+    [ "uno:11", "r3:2", "green", [ "v73.06", "h-224.64", "v147.24" ] ],
+    [ "uno:12", "r4:2", "green", [ "v64.94", "h-224.32", "v133.98" ] ],
+    [ "uno:13", "r5:2", "green", [ "v58.3", "h-224.1", "v115.41" ] ],
+    [ "r6:1", "uno:GND.1", "green", [ "v11.8", "h-205.3" ] ],
+    [ "uno:2", "led1:A", "green", [ "v26.27", "h120.84" ] ],
+    [ "led1:C", "r6:2", "green", [ "v0" ] ],
+    [ "led2:A", "uno:7", "green", [ "v-13.54", "h-154.19" ] ],
+    [ "led2:C", "uno:GND.1", "green", [ "v-6.94", "h-222.09" ] ],
+    [ "led3:A", "uno:3", "green", [ "v16.16", "h-46.92" ] ],
+    [ "led3:C", "uno:GND.1", "green", [ "v-86.14", "h-208.88" ] ],
+    [ "keypad1:C4", "r5:2", "green", [ "v22.58", "h64.17" ] ],
+    [ "uno:GND.2", "r2:1", "black", [ "v78.64", "h-398.11" ] ],
+    [ "r2:1", "r3:1", "green", [ "v0" ] ],
+    [ "r3:1", "r4:1", "green", [ "v0" ] ],
+    [ "r5:1", "r4:1", "green", [ "v1.89", "h-11.73" ] ],
+    [ "keypad1:C3", "r4:2", "green", [ "v64.53", "h61.01" ] ],
+    [ "keypad1:C2", "r3:2", "green", [ "v85.51", "h64.3" ] ],
+    [ "keypad1:C1", "r2:2", "green", [ "v111.33", "h64.12" ] ]
+  ]
+}
